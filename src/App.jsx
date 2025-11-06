@@ -1,24 +1,28 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Guides from "./pages/Guides.jsx";
-import Contact from "./pages/Contact.jsx";
+import { Routes, Route } from "react-router-dom";
 
-export default function App() {
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Rentals from "./pages/Rentals";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+function App() {
   return (
-    <div>
-      {/* Spotlight-style navbar */}
-      <nav className="bg-black/20 backdrop-blur-lg text-white px-6 py-4 flex justify-center gap-8 text-sm font-medium border-b border-white/10">
-        <Link to="/" className="hover:text-white/70">Αρχική</Link>
-        <Link to="/guides" className="hover:text-white/70">Οδηγίες</Link>
-        <Link to="/contact" className="hover:text-white/70">Επικοινωνία</Link>
-      </nav>
-
-      {/* Page Routes */}
+    <>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/guides" element={<Guides />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/rentals" element={<Rentals />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </div>
+      <Footer />
+    </>
   );
 }
+
+export default App;

@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
-/* Spotlight Neon Fog Background */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clean Spotlight gradient */
 .bg-spotlight {
-  background: url("bgmask.svg"), #000;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: linear-gradient(135deg, #6a00f4 0%, #e6007e 50%, #14002b 100%);
 }
 
 
@@ -34,6 +35,8 @@ a:hover {
 }
 
 body {
+ 
+  background: #0c111a;
   margin: 0;
   display: flex;
   place-items: center;
