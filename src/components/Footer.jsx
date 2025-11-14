@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ServiceBlocks from "../components/ServiceBlocks";
 
 export default function Footer() {
   return (
@@ -8,30 +9,48 @@ export default function Footer() {
         {/* Logo & tagline */}
         <div className="text-center">
           <h3 className="text-lg font-semibold text-cyan-400 tracking-wide">
-            CYBERVAULT
+            CYBER-VAULT
           </h3>
           <p className="mt-1 text-sm text-slate-500">
             Network Infrastructure & IT Support
           </p>
         </div>
+      <ServiceBlocks />
 
-        {/* Menu Links */}
-        <nav className="mt-8 flex justify-center gap-6 text-sm">
-          <Link to="/" className="hover:text-cyan-400 transition">Αρχική</Link>
-          <Link to="/services" className="hover:text-cyan-400 transition">Υπηρεσίες</Link>
-          <Link to="/rentals" className="hover:text-cyan-400 transition">Ενοικίαση</Link>
-          <Link to="/about" className="hover:text-cyan-400 transition">Σχετικά</Link>
-          <Link to="/contact" className="hover:text-cyan-400 transition">Επικοινωνία</Link>
-        </nav>
+       
 
         {/* Divider line */}
         <div className="mt-8 border-t border-white/5"></div>
 
         {/* Contact Info */}
         <div className="mt-6 text-center text-sm text-slate-500">
-          <p>Email: <span className="text-slate-300">info@cyber-support.gr</span></p>
-          <p className="mt-1">Τηλέφωνο: <span className="text-slate-300">(+30) ………</span></p>
+          <p>Email:{" "}
+            <a
+              href="mailto:info@cyber-support.gr"
+              className="text-slate-300 hover:text-blue-400 transition-colors"> 
+              info@cyber-support.gr       
+              </a>
+          </p>
+          
+          <p className="mt-1">
+            Τηλέφωνο:{" "}
+            <a href="tel:+302104449000" className="text-slate-300 hover:text-cyan-400 transition-colors" > 
+              210 444-9000 
+            </a>
+          </p>
+           
+          <p className="mt-1">
+              Μήνυμα μέσω{" "}
+              <a
+                href="viber://chat?number=%2B306970967734"
+                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                Viber
+              </a>
+            </p>
         </div>
+
+        
 
         {/* Copyright */}
         <div className="mt-8 text-center text-xs text-slate-600">

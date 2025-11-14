@@ -1,81 +1,114 @@
+import DomeCameraIcon from "../components/icons/DomeCameraIcon";
+
 export default function Services() {
+  const services = [
+    {
+      icon: "🛠️",
+      title: "Τεχνική Υποστήριξη Επιχειρήσεων",
+      desc: "Άμεση επίλυση προβλημάτων σε Η/Υ, συστήματα και εξοπλισμό.",
+      bullets: [
+        "Επίλυση προβλημάτων σε Η/Υ & περιφερειακά",
+        "Ρυθμίσεις και βελτιστοποίηση συστημάτων",
+        "Υποστήριξη προσωπικού στον χώρο",
+        "Προγραμματισμένες επισκέψεις συντήρησης",
+      ],
+    },
+    {
+      icon: "📶",
+      title: "Δικτύωση & WiFi Υποδομές",
+      desc: "Σταθερά δίκτυα, σωστή κάλυψη και διαχωρισμός κατηγοριών χρηστών.",
+      bullets: [
+        "WiFi Mesh για ομοιόμορφη κάλυψη",
+        "Multi-WAN routers για ασφαλή σύνδεση",
+        "VLAN: προσωπικό / πελάτες / συστήματα",
+        "Έλεγχος & βελτιστοποίηση σήματος",
+      ],
+    },
+    {
+      icon: "🛰️",
+      title: "Starlink & Backup Internet",
+      desc: "Συνεχίζετε να λειτουργείτε ακόμη και αν “πέσει” η κύρια γραμμή.",
+      bullets: [
+        "Εγκατάσταση & ευθυγράμμιση Starlink",
+        "Ενσωμάτωση στο υπάρχον δίκτυο",
+        "Αυτόματη εναλλαγή γραμμών (failover)",
+      ],
+    },
+   {
+  icon: "📶",
+  title: "4G/5G Internet & Backup",
+  desc: "Αξιόπιστο Internet ακόμη και όταν η σταθερή γραμμή παρουσιάζει πρόβλημα.",
+  bullets: [
+    "Εγκατάσταση 4G/5G modem routers με SIM",
+    "Αυτόματη μετάβαση σε mobile Internet (failover)",
+    "Βελτιστοποίηση σήματος με εξωτερικές κεραίες",
+    "Στατική IP μέσω VPN για επιχειρησιακές εφαρμογές",
+  ],
+},
+ {
+  icon: <DomeCameraIcon size={36} color="#22d3ee" />,
+  title: "Συστήματα Παρακολούθησης & Κάμερες",
+  desc: "Καθαρή εικόνα, ασφάλεια και πρόσβαση από οπουδήποτε.",
+  bullets: [
+    "Εγκατάσταση IP κάμερας & NVR",
+    "Ρύθμιση ασφαλούς πρόσβασης από κινητό",
+    "Οργάνωση κάλυψης & οπτικών πεδίων",
+  ],
+}
+   
+  ];
+
   return (
     <div className="pt-28 pb-20 px-6 bg-[#0c111a] text-slate-300">
-      <div className="max-w-5xl mx-auto space-y-16">
+      <div className="max-w-6xl mx-auto">
 
-        <header className="text-center">
-          <h1 className="text-3xl font-bold text-white">Υπηρεσίες</h1>
-          <p className="mt-3 text-slate-400">
-            Λύσεις που βοηθούν την επιχείρησή σας να λειτουργεί χωρίς άγχος και χωρίς διακοπές.
+        {/* HEADER */}
+        <header className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-white">Υπηρεσίες</h1>
+          <p className="mt-3 text-slate-400 max-w-2xl mx-auto text-lg">
+            Λύσεις για σταθερά δίκτυα, αξιόπιστη λειτουργία και άμεση τεχνική υποστήριξη.
           </p>
         </header>
 
-        {/* 1) Τεχνική Υποστήριξη */}
-        <section>
-          <h2 className="text-xl font-semibold text-white">Τεχνική Υποστήριξη Επιχειρήσεων</h2>
-          <p className="mt-2 text-slate-400">
-            Επί τόπου & απομακρυσμένη βοήθεια, με άμεση ανταπόκριση και ξεκάθαρη επικοινωνία.
-          </p>
-          <ul className="mt-4 space-y-1 text-sm list-disc list-inside text-slate-400">
-            <li>Επίλυση προβλημάτων σε Η/Υ & περιφερειακά</li>
-            <li>Ρυθμίσεις και βελτιστοποίηση συστημάτων</li>
-            <li>Υποστήριξη προσωπικού στον χώρο</li>
-            <li>Προγραμματισμένες επισκέψεις συντήρησης</li>
-          </ul>
-        </section>
+        {/* GRID OF SERVICE CARDS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {services.map((srv, i) => (
+            <div
+              key={i}
+              className="bg-[#0f1522] border border-white/5 rounded-2xl p-8 shadow-xl hover:shadow-cyan-500/10 transition-all"
+            >
+              {/* ICON */}
+              <div className="text-4xl mb-4 text-cyan-400">{srv.icon}</div>
 
-        {/* 2) Wifi & Δίκτυα */}
-        <section>
-          <h2 className="text-xl font-semibold text-white">Δικτύωση & WiFi Υποδομές</h2>
-          <p className="mt-2 text-slate-400">
-            Ρυθμίζουμε το δίκτυο ώστε να υπάρχει σταθερότητα και κάλυψη σε όλο τον χώρο.
-          </p>
-          <ul className="mt-4 space-y-1 text-sm list-disc list-inside text-slate-400">
-            <li>WiFi Mesh για ομοιόμορφη κάλυψη</li>
-            <li>Multi-WAN routers για ασφαλή σύνδεση</li>
-            <li>Διαχωρισμός δικτύου προσωπικού / πελατών / συστημάτων</li>
-            <li>Έλεγχος & βελτιστοποίηση σήματος</li>
-          </ul>
-        </section>
+              {/* TITLE */}
+              <h2 className="text-2xl font-semibold text-white">{srv.title}</h2>
 
-        {/* 3) Starlink */}
-        <section>
-          <h2 className="text-xl font-semibold text-white">Starlink & Backup Internet</h2>
-          <p className="mt-2 text-slate-400">
-            Η επιχείρηση συνεχίζει να λειτουργεί ακόμη και αν “πέσει” η γραμμή.
-          </p>
-          <ul className="mt-4 space-y-1 text-sm list-disc list-inside text-slate-400">
-            <li>Εγκατάσταση & ευθυγράμμιση Starlink</li>
-            <li>Ενσωμάτωση στο υπάρχον δίκτυο</li>
-            <li>Αυτόματη εναλλαγή γραμμών (failover)</li>
-          </ul>
-        </section>
+              {/* DESCRIPTION */}
+              <p className="mt-2 text-slate-400">{srv.desc}</p>
 
-        {/* 4) Κάμερες */}
-        <section>
-          <h2 className="text-xl font-semibold text-white">Συστήματα Παρακολούθησης & Κάμερες</h2>
-          <p className="mt-2 text-slate-400">
-            Καθαρή εικόνα και ασφαλής πρόσβαση, χωρίς περιττή πολυπλοκότητα.
-          </p>
-          <ul className="mt-4 space-y-1 text-sm list-disc list-inside text-slate-400">
-            <li>Εγκατάσταση IP κάμερας & NVR</li>
-            <li>Ρύθμιση ασφαλούς πρόσβασης από κινητό</li>
-            <li>Οργάνωση κάλυψης χώρου & οπτικών πεδίων</li>
-          </ul>
-        </section>
+              {/* BULLETS */}
+              <ul className="mt-4 space-y-2 text-sm list-disc list-inside text-slate-400">
+                {srv.bullets.map((b, idx) => (
+                  <li key={idx}>{b}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
 
-        {/* 5) Monitoring */}
-        <section>
-          <h2 className="text-xl font-semibold text-white">Monitoring & Προληπτική Συντήρηση</h2>
-          <p className="mt-2 text-slate-400">
-            Παρακολουθούμε την κατάσταση του δικτύου και παρεμβαίνουμε πριν παρουσιαστεί πρόβλημα.
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <a
+            href="/contact"
+            className="inline-block px-8 py-3 text-base font-medium rounded-md
+                       bg-cyan-400 text-slate-900 hover:bg-cyan-300 transition-all
+                       shadow-lg hover:shadow-cyan-400/40">
+            Επικοινωνήστε Μαζί Μας
+          </a>
+          <p className="mt-3 text-slate-500 text-sm">
+            Θα βρούμε την κατάλληλη λύση για τις ανάγκες της επιχείρησής σας.
           </p>
-          <ul className="mt-4 space-y-1 text-sm list-disc list-inside text-slate-400">
-            <li>Τακτικός έλεγχος εξοπλισμού</li>
-            <li>Αναβαθμίσεις firmware & ρυθμίσεων</li>
-            <li>Καταγραφή ενεργειών και παρατηρήσεων</li>
-          </ul>
-        </section>
+        </div>
 
       </div>
     </div>

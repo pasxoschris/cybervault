@@ -1,41 +1,57 @@
 export default function About() {
   return (
     <div className="pt-28 pb-20 px-6 bg-[#0c111a] text-slate-300">
-      <div className="max-w-4xl mx-auto space-y-12">
+      <div className="max-w-4xl mx-auto space-y-16">
 
-        <h1 className="text-3xl font-bold text-white text-center">Σχετικά με εμάς</h1>
+        {/* Title */}
+        <header className="text-center space-y-3">
+          <h1 className="text-3xl font-bold text-white">Σχετικά με την CyberVault</h1>
+          <p className="text-slate-400 leading-relaxed max-w-2xl mx-auto">
+            Η CyberVault δημιουργήθηκε για να προσφέρει σταθερότητα, ασφάλεια 
+            και άμεση τεχνική υποστήριξη σε επιχειρήσεις που λειτουργούν 
+            καθημερινά χωρίς περιθώριο για καθυστερήσεις.
+          </p>
+        </header>
 
-        <p className="text-slate-400 text-center leading-relaxed">
-          Η υποστήριξη δεν είναι απλώς μια επίσκεψη. Είναι η καθημερινή σιγουριά ότι
-          υπάρχει κάποιος που απαντάει όταν χρειάζεται. Θέλουμε η επιχείρησή σας να 
-          λειτουργεί ομαλά και χωρίς άγχος.
-        </p>
-
-        <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">Πώς δουλεύουμε</h2>
+        {/* Mission */}
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold text-white">Αποστολή μας</h2>
           <p className="text-slate-400 leading-relaxed">
-            Προτεραιότητα σε πραγματικά προβλήματα, καθαρή επικοινωνία με ρεαλιστικές λύσεις ανάλογα με τον χώρο.
+            Να εξασφαλίζουμε ότι κάθε επιχείρηση που συνεργάζεται μαζί μας 
+            λειτουργεί χωρίς διακοπές. Η τεχνική υποστήριξη δεν είναι απλώς μια υπηρεσία· 
+            είναι η υπόσχεση ότι υπάρχει πάντα κάποιος δίπλα σας όταν χρειάζεται.
+                    </p>
+      <br></br>
+          <ul className="list-disc list-inside space-y-2 text-slate-400">
+            <li><span className="text-white font-medium">Αξιοπιστία:</span> Υποστήριξη που απαντάει — όχι όταν προλάβει.</li>
+            <li><span className="text-white font-medium">Σαφήνεια:</span> Ξεκάθαρες εξηγήσεις, χωρίς τεχνικά “μαύρα κουτιά”.</li>
+            <li><span className="text-white font-medium">Συνέπεια:</span> Άμεση ανταπόκριση και πραγματικές λύσεις.</li>
+            <li><span className="text-white font-medium">Ασφάλεια:</span> Προστασία δικτύου, δεδομένων και λειτουργίας.</li>
+          </ul>
+         <p className="text-slate-400 leading-relaxed">
+            Κάθε επιχείρηση είναι διαφορετική. Μελετάμε τον χώρο, εντοπίζουμε 
+            τις αδυναμίες και διαμορφώνουμε λύσεις που ταιριάζουν πραγματικά στις ανάγκες σας.
+            Είμαστε δίπλα σας από την εγκατάσταση έως την καθημερινή υποστήριξη.
           </p>
         </section>
 
-        <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">Σε ποιους απευθυνόμαστε</h2>
+        {/* Who We Serve */}
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold text-white">Με ποιους συνεργαζόμαστε</h2>
           <p className="text-slate-400 leading-relaxed">
-            Σε χώρους που βασίζονται στην καθημερινή λειτουργία:
+            Υποστηρίζουμε χώρους όπου η λειτουργία δεν μπορεί να σταματήσει:
           </p>
-          <ul className="text-slate-400 list-disc list-inside text-sm space-y-1">
-            <li>Εστιατόρια,</li>
-              <li> Καφέ & Bar</li>
-            
+          <ul className="text-slate-400 list-disc list-inside space-y-1">
+            <li>Εστιατόρια, καφέ & bars</li>
+            <li>Καταστήματα με εκτυπωτές και tablets</li>
             <li>Μικρές & μεσαίες επιχειρήσεις</li>
-            <li>Χώροι που χρειάζονται σταθερό WiFi</li>
+            <li>Χώρους με ανάγκη σταθερού WiFi & δικτύου</li>
+            <li>Επιχειρήσεις που χρειάζονται 4G/5G/Starlink λύσεις</li>
           </ul>
         </section>
 
-        <blockquote className="text-center text-slate-400 italic pt-6">
-          «Να ξέρετε ότι δεν είστε μόνοι όταν κάτι δεν δουλεύει.»
-        </blockquote>
-
+      
+        {/* CTA */}
         <div className="text-center pt-6">
           <a
             href="/contact"
@@ -45,7 +61,7 @@ export default function About() {
             Επικοινωνήστε Μαζί Μας
           </a>
           <p className="mt-2 text-slate-500 text-sm">
-            Μιλάμε απλά, ξεκάθαρα και ανθρώπινα.
+            Θέλουμε η επιχείρησή σας να λειτουργεί χωρίς άγχος — κάθε μέρα.
           </p>
         </div>
 

@@ -1,5 +1,4 @@
-import logo from "../assets/cybervault-icon.svg";
-
+import logo from "../assets/cyber-vault.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -7,7 +6,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-[#0c111a]/90 backdrop-blur-sm border-b border-white/5">
+<header className="fixed top-0 w-full z-50 bg-[#0c111a]/95 backdrop-blur-sm border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         
 <Link to="/" className="flex items-center gap-3">
@@ -17,7 +16,7 @@ export default function Header() {
     className="w-8 h-8 object-contain opacity-90" 
   />
   <span className="text-xl font-bold tracking-wide text-cyan-400">
-    CYBERVAULT
+    CYBER-VAULT
   </span>
 </Link>
 
@@ -29,6 +28,8 @@ export default function Header() {
           <Link to="/rentals" className="hover:text-cyan-400 transition">Ενοικίαση Εξοπλισμού</Link>
           <Link to="/about" className="hover:text-cyan-400 transition">Σχετικά</Link>
           <Link to="/contact" className="hover:text-cyan-400 transition">Επικοινωνία</Link>
+          <Link to="/categories" className="hover:text-cyan-400 transition">  Οδηγός Επίλυσης</Link>
+
         </nav>
 
         {/* MOBILE BUTTON */}
@@ -48,6 +49,8 @@ export default function Header() {
           <Link onClick={() => setOpen(false)} to="/rentals" className="hover:text-cyan-400">Ενοικίαση</Link>
           <Link onClick={() => setOpen(false)} to="/about" className="hover:text-cyan-400">Σχετικά</Link>
           <Link onClick={() => setOpen(false)} to="/contact" className="hover:text-cyan-400">Επικοινωνία</Link>
+        <Link onClick={() => setOpen(false)} to="/categories" className="hover:text-cyan-400">  Κατηγορίες</Link>
+
         </nav>
       )}
     </header>

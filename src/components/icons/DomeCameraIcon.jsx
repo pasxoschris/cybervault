@@ -1,0 +1,48 @@
+export default function PrinterIcon({ size = 80, color = "#22d3ee" }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 512 512"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="drop-shadow-[0_0_12px_rgba(34,211,238,0.5)]"
+    >
+      <rect
+        x="80"
+        y="140"
+        width="352"
+        height="240"
+        rx="20"
+        stroke={color}
+        strokeWidth="16"
+      />
+      <rect
+        x="120"
+        y="100"
+        width="272"
+        height="60"
+        rx="12"
+        stroke={color}
+        strokeWidth="14"
+      />
+      <rect
+        x="150"
+        y="260"
+        width="212"
+        height="60"
+        rx="8"
+        fill={color}
+      />
+      <rect
+        x="170"
+        y="180"
+        width="172"
+        height="18"
+        rx="4"
+        fill={color}
+        opacity="0.6"
+      />
+    </svg>
+  );
+}
