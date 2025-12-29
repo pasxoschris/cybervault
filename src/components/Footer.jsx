@@ -26,9 +26,9 @@ export default function Footer() {
         <div className="mt-6 text-center text-sm text-slate-500">
           <p>Email:{" "}
             <a
-              href="mailto:info@cyber-support.gr"
+              href="mailto:info@cyber-vault.gr"
               className="text-slate-300 hover:text-blue-400 transition-colors"> 
-              info@cyber-support.gr       
+              info@cyber-vault.gr       
               </a>
           </p>
           
@@ -54,7 +54,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 text-center text-xs text-slate-600">
-          © {new Date().getFullYear()} CYBERVAULT — All Rights Reserved.
+          © {new Date().getFullYear()} CYBER-VAULT — All Rights Reserved.
         </div>
 
       </div>

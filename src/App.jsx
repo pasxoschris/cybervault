@@ -10,6 +10,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Categories from "./pages/categories/Categories";
 import Printers from "./pages/categories/Printers";
+import Training from "./pages/Training";
+
 
 function App() {
   return (
@@ -22,10 +24,10 @@ function App() {
         <Route path="/rentals" element={<Rentals />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-
-        {/* Νέες σελίδες Κατηγοριών */}
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/printers" element={<Printers />} />
+        <Route path="/training" element={<Training />} />
+
       </Routes>
       <Footer />
     </>
