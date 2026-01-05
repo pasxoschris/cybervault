@@ -29,8 +29,8 @@ export default function Hero() {
         </p>
 
         <p className="mt-3 text-slate-400 leading-relaxed">
-          Υποστήριξη & δίκτυα για επιχειρήσεις.<br />
-          
+          Τεχνική Υποστήριξη & δίκτυα για <br />
+          επιχειρήσεις εστίασης και καφέ         
         </p>
 
         <Link
