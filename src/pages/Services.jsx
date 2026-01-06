@@ -1,10 +1,10 @@
-import DomeCameraIcon from "../components/icons/DomeCameraIcon";
+import DomeCameraIcon from "../components/icons/DomeCameraIcon.jsx";
 
 export default function Services() {
   const services = [
     {
       icon: <span aria-hidden>🛠️</span>,
-      title: "Official support Spotlight POS",
+      title: "Official SpotlightPOS support",
       desc: "Επίσημοι συνεργάτες OXINUS HELLAS",
       bullets: [
         "Εξειδικευμένη υποστήριξη για επιχειρήσεις εστίασης και καφέ",
@@ -20,14 +20,13 @@ export default function Services() {
       title: "Δικτύωση & WiFi Υποδομές",
       desc: "Σταθερά δίκτυα, σωστή κάλυψη και διαχωρισμός κατηγοριών χρηστών.",
       bullets: [
-        "WiFi Mesh για ομοιόμορφη κάλυψη",
         "Multi-WAN routers για ασφαλή σύνδεση",
         "VLAN: προσωπικό / πελάτες / συστήματα",
+        "WiFi Mesh για ομοιόμορφη κάλυψη",
         "Έλεγχος & βελτιστοποίηση σήματος",
       ],
     },
 
-    // ✅ ΝΕΑ ΕΝΟΠΟΙΗΜΕΝΗ ΚΑΤΗΓΟΡΙΑ
     {
       icon: <span aria-hidden>🛰️</span>,
       title: "Starlink & 4G/5G Internet (SIM) — Backup & Failover",
@@ -42,7 +41,7 @@ export default function Services() {
       ],
     },
 
-    // ✅ ΝΕΑ ΥΠΗΡΕΣΙΑ: ΔΗΜΙΟΥΡΓΙΑ ΙΣΤΟΣΕΛΙΔΩΝ
+    // ✅ ΔΗΜΙΟΥΡΓΙΑ ΙΣΤΟΣΕΛΙΔΩΝ
     {
       icon: <span aria-hidden>🌐</span>,
       title: "Δημιουργία Ιστοσελίδων",

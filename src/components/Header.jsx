@@ -60,31 +60,12 @@ export default function Header() {
       <div className="md:hidden">
         {open && (
           <nav className="bg-[#0c111a] border-t border-white/10 px-6 py-4 flex flex-col gap-4 text-slate-300 text-sm">
-
-            <Link onClick={() => setOpen(false)} to="/" className="hover:text-cyan-400">
-              Αρχική
-            </Link>
-
-            <Link onClick={() => setOpen(false)} to="/services" className="hover:text-cyan-400">
-              Υπηρεσίες
-            </Link>
-
-            <Link onClick={() => setOpen(false)} to="/rentals" className="hover:text-cyan-400">
-              Ενοικίαση Εξοπλισμού
-            </Link>
-
-            <Link onClick={() => setOpen(false)} to="/about" className="hover:text-cyan-400">
-              Σχετικά
-            </Link>
-
-            <Link onClick={() => setOpen(false)} to="/contact" className="hover:text-cyan-400">
-              Επικοινωνία
-            </Link>
-
-            <Link onClick={() => setOpen(false)} to="/categories" className="hover:text-cyan-400">
-              Οδηγός Επίλυσης
-            </Link>
-
+            <Link onClick={() => setOpen(false)} to="/" className="hover:text-cyan-400">              Αρχική           </Link>
+            <Link onClick={() => setOpen(false)} to="/services" className="hover:text-cyan-400">      Υπηρεσίες        </Link>
+            <Link onClick={() => setOpen(false)} to="/about" className="hover:text-cyan-400">         Σχετικά          </Link>
+            <Link onClick={() => setOpen(false)} to="/contact" className="hover:text-cyan-400">       Επικοινωνία      </Link>     
+            <Link onClick={() => setOpen(false)} to="/categories" className="hover:text-cyan-400">    Οδηγός Επίλυσης  </Link>
+            <Link onClick={() => setOpen(false)} to="/training" className="hover:text-cyan-400">      Training         </Link>
           </nav>
         )}
       </div>
