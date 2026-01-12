@@ -53,6 +53,18 @@ export default function Footer() {
               Viber
             </a>
                     </p>
+        <p className="mt-1">
+  <a
+    href="https://www.google.com/maps?q=Πανεπιστημίου+64,+10564,+Αθήνα"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-cyan-400 transition-colors"
+  >
+    Πανεπιστημίου 64, 10564 Αθήνα
+  </a>
+</p>
+
+        
         </address>
 
         {/* Copyright */}
